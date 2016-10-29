@@ -17,10 +17,8 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
 
-    private TextView txt_fecha_hoy_date;
     private RadioButton rdButton_salas;
     private RadioButton rdButton_monitorias;
-    private Button btnConsultar;
 
 
     @Override
@@ -28,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txt_fecha_hoy_date = (TextView) findViewById(R.id.txt_fecha_hoy_date);
+        TextView txt_fecha_hoy_date = (TextView) findViewById(R.id.txt_fecha_hoy_date);
         rdButton_salas = (RadioButton) findViewById(R.id.rdButton_salas);
         rdButton_monitorias = (RadioButton) findViewById(R.id.rdButton_monitorias);
-        btnConsultar = (Button) findViewById(R.id.btnConsultar);
+        Button btnConsultar = (Button) findViewById(R.id.btnConsultar);
 
 
         rdButton_salas.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         btnConsultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Proximamente, DIOS LO BENDIGA MR BRAYAN ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Proximamente", Toast.LENGTH_SHORT).show();
             }
         });
 

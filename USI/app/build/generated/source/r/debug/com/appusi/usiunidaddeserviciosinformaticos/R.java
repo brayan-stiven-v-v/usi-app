@@ -1657,8 +1657,8 @@ containing a value of this type.
         public static final int icon=0x7f0c0029;
         public static final int ifRoom=0x7f0c001e;
         public static final int image=0x7f0c0026;
-        public static final int imageView=0x7f0c0058;
-        public static final int imageView2=0x7f0c0054;
+        public static final int imgSearchMonitorias=0x7f0c0059;
+        public static final int imgSearchSalas=0x7f0c005a;
         public static final int info=0x7f0c0068;
         public static final int line1=0x7f0c0062;
         public static final int line3=0x7f0c0066;
@@ -1674,8 +1674,8 @@ containing a value of this type.
         public static final int progress_circular=0x7f0c0005;
         public static final int progress_horizontal=0x7f0c0006;
         public static final int radio=0x7f0c003b;
-        public static final int rdButton_monitorias=0x7f0c005b;
-        public static final int rdButton_salas=0x7f0c0057;
+        public static final int rdButton_monitorias=0x7f0c0058;
+        public static final int rdButton_salas=0x7f0c0056;
         public static final int screen=0x7f0c0015;
         public static final int scrollIndicatorDown=0x7f0c0035;
         public static final int scrollIndicatorUp=0x7f0c0032;
@@ -1706,15 +1706,15 @@ containing a value of this type.
         public static final int text=0x7f0c0067;
         public static final int text2=0x7f0c0065;
         public static final int textSpacerNoButtons=0x7f0c0034;
-        public static final int txt_desea_buscar =0x7f0c0053;
         public static final int time=0x7f0c0063;
         public static final int title=0x7f0c002a;
         public static final int title_template=0x7f0c002f;
         public static final int topPanel=0x7f0c002e;
-        public static final int txt_USI_monitorias=0x7f0c0059;
-        public static final int txt_USI_monitorias_description=0x7f0c005a;
-        public static final int txt_USI_salas=0x7f0c0055;
-        public static final int txt_USI_salas_description=0x7f0c0056;
+        public static final int txt_USI_monitorias=0x7f0c0055;
+        public static final int txt_USI_monitorias_description=0x7f0c0054;
+        public static final int txt_USI_salas=0x7f0c005b;
+        public static final int txt_USI_salas_description=0x7f0c0057;
+        public static final int txt_desea_buscar=0x7f0c0053;
         public static final int txt_fecha_hoy=0x7f0c0051;
         public static final int txt_fecha_hoy_date=0x7f0c0052;
         public static final int up=0x7f0c0008;
@@ -1793,14 +1793,15 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f060011;
         public static final int abc_toolbar_collapse_description=0x7f060012;
         public static final int app_name=0x7f060014;
+        public static final int btn_USI_buscar=0x7f060015;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int text_desea_buscar=0x7f060015;
-        public static final int text_fecha_hoy=0x7f060016;
-        public static final int text_fecha_hoy_date=0x7f060017;
-        public static final int txt_USI_monitorias=0x7f060018;
-        public static final int txt_USI_monitorias_description=0x7f060019;
-        public static final int txt_USI_salas=0x7f06001a;
-        public static final int txt_USI_salas_description=0x7f06001b;
+        public static final int tet_USI_desea_buscar=0x7f060016;
+        public static final int txt_USI_fecha_hoy=0x7f060017;
+        public static final int txt_USI_fecha_hoy_date=0x7f060018;
+        public static final int txt_USI_monitorias=0x7f060019;
+        public static final int txt_USI_monitorias_description=0x7f06001a;
+        public static final int txt_USI_salas=0x7f06001b;
+        public static final int txt_USI_salas_description=0x7f06001c;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090086;
