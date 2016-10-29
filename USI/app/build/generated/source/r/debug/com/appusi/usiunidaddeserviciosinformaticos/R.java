@@ -1706,7 +1706,7 @@ containing a value of this type.
         public static final int text=0x7f0c0067;
         public static final int text2=0x7f0c0065;
         public static final int textSpacerNoButtons=0x7f0c0034;
-        public static final int textView3=0x7f0c0053;
+        public static final int txt_desea_buscar =0x7f0c0053;
         public static final int time=0x7f0c0063;
         public static final int title=0x7f0c002a;
         public static final int title_template=0x7f0c002f;
