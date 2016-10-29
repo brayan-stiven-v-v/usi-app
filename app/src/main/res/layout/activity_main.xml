@@ -12,7 +12,7 @@
     tools:context="com.appusi.usiunidaddeserviciosinformaticos.MainActivity">
 
     <TextView
-        android:text="@string/text_fecha_hoy"
+        android:text="@string/txt_USI_fecha_hoy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -30,7 +30,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-        android:text="@string/text_fecha_hoy_date"
+        android:text="@string/txt_USI_fecha_hoy_date"
         android:textSize="18sp"
         tools:ignore="RelativeOverlap" />
 
@@ -39,117 +39,105 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_fecha_hoy"
         android:layout_marginTop="110dp"
-        android:id="@+id/textView3"
-        android:text="@string/text_desea_buscar"
+        android:id="@+id/txt_seleccione_buscar"
+        android:text="@string/txt_USI_desea_buscar"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault"
         android:textSize="18sp" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:weightSum="1">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="37dp"
-                app:srcCompat="@android:drawable/ic_search_category_default"
-                android:id="@+id/imageView2"
-                tools:ignore="ContentDescription" />
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                tools:ignore="InefficientWeight">
-
-                <TextView
-                    android:text="@string/txt_USI_salas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_USI_salas"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:text="@string/txt_USI_salas_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_USI_salas_description"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-                    android:textColor="@color/colorControlNormal" />
-            </LinearLayout>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/rdButton_salas" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="37dp"
-                app:srcCompat="@android:drawable/ic_search_category_default"
-                android:id="@+id/imageView" />
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1.00">
-
-                <TextView
-                    android:text="@string/txt_USI_monitorias"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_USI_monitorias"
-                    android:layout_weight="1"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:text="@string/txt_USI_monitorias_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_USI_monitorias_description"
-                    android:layout_weight="1"
-                    android:textAppearance="@android:style/TextAppearance.DeviceDefault"
-                    android:textColor="@color/colorControlNormal" />
-            </LinearLayout>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/rdButton_monitorias" />
-        </LinearLayout>
-
-    </LinearLayout>
-
     <Button
-        android:text="Button"
+        android:text="@string/btn_USI_buscar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnConsultar"
         android:layout_marginBottom="26dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/colorPrimary"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="37dp"
+        app:srcCompat="@android:drawable/ic_search_category_default"
+        android:id="@+id/imgSearchSalas"
+        tools:ignore="ContentDescription"
+        android:contentDescription="@string/txt_USI_salas"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/txt_seleccione_buscar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/txt_USI_salas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_USI_salas"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/imgSearchSalas"
+        android:layout_alignRight="@+id/txt_fecha_hoy"
+        android:layout_alignEnd="@+id/txt_fecha_hoy" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rdButton_salas"
+        android:layout_alignTop="@+id/txt_USI_salas"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="37dp"
+        app:srcCompat="@android:drawable/ic_search_category_default"
+        android:id="@+id/imgSearchMonitorias"
+        android:contentDescription="@string/txt_USI_monitorias"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/imgSearchSalas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rdButton_monitorias"
+        android:layout_alignBottom="@+id/imgSearchMonitorias"
+        android:layout_alignLeft="@+id/rdButton_salas"
+        android:layout_alignStart="@+id/rdButton_salas" />
+
+    <TextView
+        android:text="@string/txt_USI_monitorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_USI_monitorias"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/imgSearchMonitorias"
+        android:layout_alignLeft="@+id/txt_USI_salas_description"
+        android:layout_alignStart="@+id/txt_USI_salas_description" />
+
+    <TextView
+        android:text="@string/txt_USI_monitorias_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_USI_monitorias_description"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="@color/colorControlNormal"
+        android:layout_below="@+id/txt_USI_monitorias"
+        android:layout_alignLeft="@+id/txt_USI_monitorias"
+        android:layout_alignStart="@+id/txt_USI_monitorias" />
+
+    <TextView
+        android:text="@string/txt_USI_salas_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_USI_salas_description"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="@color/colorControlNormal"
+        android:layout_below="@+id/txt_USI_salas"
+        android:layout_alignLeft="@+id/txt_USI_salas"
+        android:layout_alignStart="@+id/txt_USI_salas" />
 
 </RelativeLayout>
