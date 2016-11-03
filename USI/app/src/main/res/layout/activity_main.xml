@@ -78,7 +78,7 @@
     <ImageView
         android:layout_width="38dp"
         android:layout_height="37dp"
-        app:srcCompat="@android:drawable/ic_search_category_default"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size"
         android:id="@+id/imgSearchSalas"
         tools:ignore="ContentDescription"
         android:layout_marginTop="35dp"
@@ -90,7 +90,7 @@
     <ImageView
         android:layout_width="38dp"
         android:layout_height="37dp"
-        app:srcCompat="@android:drawable/ic_search_category_default"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size"
         android:id="@+id/imgSearchMonitorias"
         android:layout_marginTop="13dp"
         android:layout_below="@+id/imgSearchSalas"
@@ -139,7 +139,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnConsultar"
         android:textColor="@android:color/white"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/boton_seleccionado"
+
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

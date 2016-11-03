@@ -12,6 +12,10 @@
         "source": "/home/cvem8165/usi-app/USI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_btn_borderless_material.xml"
     },
     {
+        "merged": "/home/cvem8165/usi-app/USI/app/build/intermediates/res/merged/debug/drawable/boton_redondo.xml",
+        "source": "/home/cvem8165/usi-app/USI/app/src/main/res/drawable/boton_redondo.xml"
+    },
+    {
         "merged": "/home/cvem8165/usi-app/USI/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
         "source": "/home/cvem8165/usi-app/USI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_dialog_material_background_dark.xml"
     },
@@ -68,12 +72,20 @@
         "source": "/home/cvem8165/usi-app/USI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_text_cursor_material.xml"
     },
     {
+        "merged": "/home/cvem8165/usi-app/USI/app/build/intermediates/res/merged/debug/drawable/boton_seleccionado.xml",
+        "source": "/home/cvem8165/usi-app/USI/app/src/main/res/drawable/boton_seleccionado.xml"
+    },
+    {
         "merged": "/home/cvem8165/usi-app/USI/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
         "source": "/home/cvem8165/usi-app/USI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_ratingbar_full_material.xml"
     },
     {
         "merged": "/home/cvem8165/usi-app/USI/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
         "source": "/home/cvem8165/usi-app/USI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/home/cvem8165/usi-app/USI/app/build/intermediates/res/merged/debug/drawable/boton_click.xml",
+        "source": "/home/cvem8165/usi-app/USI/app/src/main/res/drawable/boton_click.xml"
     },
     {
         "merged": "/home/cvem8165/usi-app/USI/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
