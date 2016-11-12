@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_48fbd3e2214376ac666ee1f20c7b6caa2f478133/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_e986404a7365aee8bd39427830a7870b0bf1e15b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.0.1_dcf58f7642931a1066087cf4feb9b42533a426c1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_9d5eb76b2c8ab741ee96952a1f977989695a44a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="84336e4ccab6129e1907032eb65300fa1f1160e4">
+        <dex dex="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_15eba594d4387574ff03bcdcbb0062ca680852fa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_0eac673d18b87a666e41d9a6d50fdfe8ff714d6c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/cvem8165/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_2e826ebf2e7635cb83fc87497537621755d6fb40/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_4ead251e41ed9641ab3cc353825051df2c626544/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="363f0b6c7c6bbd12779bc9291feabeb8576e5377">
+        <dex dex="/home/cvem8165/Descargas/usi-app-master/USI/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_be4d5069713046262e8d6117118c5bfd09d273e7/classes.dex" />
+    </item>
+
+</items>
