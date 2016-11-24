@@ -56,10 +56,14 @@ public class MainActivity extends AppCompatActivity {
         btnConsultar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Proximamente", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Proximamente", Toast.LENGTH_SHORT).show();
 
                 if(rdButton_salas.isChecked()){
                     Intent intent = new Intent(MainActivity.this,SalasActivity.class);
+                    startActivity(intent);
+                }
+                else if(rdButton_monitorias.isChecked()){
+                    Intent intent = new Intent(MainActivity.this,Monitorias.class);
                     startActivity(intent);
                 }
             }
