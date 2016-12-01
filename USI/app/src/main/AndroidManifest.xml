@@ -23,7 +23,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity android:name=".Monitorias" />
-        <activity android:name=".detalles"></activity>
+        <activity android:name=".Detalles"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.appusi.usiunidaddeserviciosinformaticos.Adapters.AdaptadorSalas;
+import com.appusi.usiunidaddeserviciosinformaticos.Clases.Sala;
 import com.appusi.usiunidaddeserviciosinformaticos.Clases.SalaInfo;
 
 import java.util.ArrayList;
@@ -20,7 +21,11 @@ public class SalasActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
 
-    private ArrayList<SalaInfo> informacionSalas;
+    private RecyclerView.LayoutManager layoutManager;
+
+    //private ArrayList<Sala> informacionSalas;
+    private RecyclerView.Adapter myAdaptador;
+
     private Button buscar_sala;
 
     @Override
@@ -28,20 +33,11 @@ public class SalasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salas);
 
-        //inicialización de la lista de datos de ejemplo
-        informacionSalas = new ArrayList<SalaInfo>();
 
-        ejemploLlenar();
 
-        //Inicialización RecyclerView
-        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        recyclerView.setHasFixedSize(true);
 
-        final AdaptadorSalas adaptadorSalas = new AdaptadorSalas(informacionSalas);
 
-        recyclerView.setAdapter(adaptadorSalas);
-        recyclerView.setLayoutManager(
-                new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+
 
         buscar_sala = (Button) findViewById(R.id.btn_buscar_sala);
 
@@ -55,30 +51,33 @@ public class SalasActivity extends AppCompatActivity {
     }
 
 
-    private void ejemploLlenar(){
-
-        SalaInfo temp3[]= {new SalaInfo("Sala A","Ocupada"),
-                new SalaInfo("Sala B","ocupada")};
-        añadirSalas("10:00 am - 12:00 pm", temp3);
-        SalaInfo temp4[]= {new SalaInfo("Sala F","Ocupada"),
-                new SalaInfo("Sala L","disponible")};
-        añadirSalas("8:00 am - 10:00 pm", temp4);
-        SalaInfo temp[]= {new SalaInfo("Sala A","Ocupada"),
-                new SalaInfo("Sala B","disponible")};
-        añadirSalas("2:00 pm - 4:00 pm", temp);
-        SalaInfo temp2[]= {new SalaInfo("Sala C","Ocupada"),
-                new SalaInfo("Sala D","disponible")};
-        añadirSalas("4:00 pm - 6:00 pm", temp2);
+    private ArrayList<Sala> ejemploLlenar(){
+        return new ArrayList<Sala>(){{
+           add(new Sala("Sala J","C",20,"CLase de seguridad", "#F2F2F2"));
+           add(new Sala("Sala I","C",20,"CLase de ING.Software", "#F2F2F3"));
+        }};
     }
 
-    private void añadirSalas(String Hora,SalaInfo[] salas){
 
-        informacionSalas.add(new SalaInfo(Hora,""));
 
-        for (SalaInfo i:salas) {
-            informacionSalas.add(i);
-        }
-        informacionSalas.add(new SalaInfo("",""));
+
+    public void construirRecyclerView(ArrayList<Sala> infoSala){
+        //Inicialización RecyclerView
+        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        layoutManager = new LinearLayoutManager(this);
+
+
+
+        myAdaptador = new AdaptadorSalas(infoSala, R.layout.item_salas, new AdaptadorSalas.OnItemListener() {
+            @Override
+            public void OnItemClick(Sala salita, int position) {
+                Toast.makeText(SalasActivity.this, salita.getNombre() + " - " + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        recyclerView.setAdapter(myAdaptador);
+        recyclerView.setLayoutManager(layoutManager);
+
 
     }
 
