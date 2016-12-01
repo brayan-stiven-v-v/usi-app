@@ -1,22 +1,25 @@
 package com.appusi.usiunidaddeserviciosinformaticos.Clases;
 
+import java.io.Serializable;
+
 /**
  * Created by cvem8165 on 1/12/16.
  */
 
-public class Sala {
+// la serializamos para usarla como parametro en un intento
+public class Sala implements Serializable {
     private String nombre;
     private String nombreBloque;
     private int capacidad;
-    private String descripcion;
+    private String descripcionPrestamo;
     private String color;
 
 
-    public Sala(String nombre, String nombreBloque, int capacidad, String descripcion, String color) {
+    public Sala(String nombre, String nombreBloque, int capacidad, String descripcionPrestamo, String color) {
         this.nombre = nombre;
         this.nombreBloque = nombreBloque;
         this.capacidad = capacidad;
-        this.descripcion = descripcion;
+        this.descripcionPrestamo = descripcionPrestamo;
         this.color = color;
     }
 
@@ -49,12 +52,12 @@ public class Sala {
         this.capacidad = capacidad;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDescripcionPrestamo() {
+        return descripcionPrestamo;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescripcionPrestamo(String descripcionPrestamo) {
+        this.descripcionPrestamo = descripcionPrestamo;
     }
 
     public String getColor() {

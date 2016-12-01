@@ -1,9 +1,12 @@
 package com.appusi.usiunidaddeserviciosinformaticos;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,9 +16,18 @@ import android.widget.Toast;
 
 import com.appusi.usiunidaddeserviciosinformaticos.Adapters.AdaptadorSalas;
 import com.appusi.usiunidaddeserviciosinformaticos.Clases.Sala;
-import com.appusi.usiunidaddeserviciosinformaticos.Clases.SalaInfo;
+
+import com.loopj.android.http.*;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import cz.msebera.android.httpclient.Header;
 
 public class SalasActivity extends AppCompatActivity {
 
@@ -23,10 +35,11 @@ public class SalasActivity extends AppCompatActivity {
 
     private RecyclerView.LayoutManager layoutManager;
 
-    //private ArrayList<Sala> informacionSalas;
+    private ArrayList<Sala> informacionSalas;
     private RecyclerView.Adapter myAdaptador;
 
     private Button buscar_sala;
+    private ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +47,13 @@ public class SalasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_salas);
 
 
+        informacionSalas = new ArrayList<>();
 
-
+        dialog = new ProgressDialog(this);
+        dialog.setIndeterminate(true);
+        dialog.setCancelable(false);
+        dialog.setMessage("Cargando.. Espere por favor...");
+        consumir();
 
 
 
@@ -45,6 +63,7 @@ public class SalasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(SalasActivity.this,"Aun no esta implementado",Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -59,7 +78,45 @@ public class SalasActivity extends AppCompatActivity {
     }
 
 
+    public void consumir(){
+        AsyncHttpClient client;
+        client = new AsyncHttpClient();
+        dialog.show();
+        client.get("http://dijansoft.xyz/usiWS/index.php?accion=todasprogramadas", new TextHttpResponseHandler() {
 
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, String responseString) {
+
+
+                try{
+                    Log.d("Respuesta",responseString);
+                    JSONArray respuestaJson = new JSONArray(responseString);
+
+                    for (int i = 0; i < respuestaJson.length(); i++) {
+                        JSONObject temp = (JSONObject) respuestaJson.get(i);
+                        Sala tempSalita  = new Sala(temp.getString("nombre_sala"),
+                                temp.getString("nombre_bloque"),
+                                temp.getInt("capacidad"),
+                                temp.getString("descripcion"),
+                                temp.getString("color"));
+
+                        informacionSalas.add(tempSalita);
+                    }
+                    dialog.dismiss();
+                    construirRecyclerView(informacionSalas);
+                }catch(JSONException e){
+                    Log.e("ERROR en json",e.toString());
+                }
+
+            }
+        });
+    }
 
     public void construirRecyclerView(ArrayList<Sala> infoSala){
         //Inicialización RecyclerView
@@ -71,7 +128,10 @@ public class SalasActivity extends AppCompatActivity {
         myAdaptador = new AdaptadorSalas(infoSala, R.layout.item_salas, new AdaptadorSalas.OnItemListener() {
             @Override
             public void OnItemClick(Sala salita, int position) {
-                Toast.makeText(SalasActivity.this, salita.getNombre() + " - " + position, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(SalasActivity.this, salita.getNombre() + " - " + position, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SalasActivity.this,ActivityDetallesSalas.class);
+                intent.putExtra("sala", salita);
+                startActivity(intent);
             }
         });
 

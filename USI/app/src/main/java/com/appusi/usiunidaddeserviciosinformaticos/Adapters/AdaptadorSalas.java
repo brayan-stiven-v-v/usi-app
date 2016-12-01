@@ -74,7 +74,7 @@ public class AdaptadorSalas
 
         public void bindSalaInfo(final Sala t, final OnItemListener listener) {
             txtTitulo.setText(t.getNombre());
-            txtSubtitulo.setText(t.getDescripcion());
+            txtSubtitulo.setText(t.getDescripcionPrestamo());
             txtBloque.setText(t.getNombreBloque());
 
             itemView.setOnClickListener(new View.OnClickListener() {
